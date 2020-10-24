@@ -25,14 +25,14 @@ class SimpleAlertBox {
   final String buttonText;
   SimpleAlertBox(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -41,7 +41,7 @@ class SimpleAlertBox {
             title: Row(
               children: <Widget>[
                 Icon(
-                  Icons.notifications,
+                  icon ?? Icons.notifications,
                   color: titleTextColor,
                 ),
                 SizedBox(
@@ -110,14 +110,14 @@ class InfoAlertBox {
   final String buttonText;
   InfoAlertBox(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -196,14 +196,14 @@ class SuccessAlertBox {
   final String buttonText;
   SuccessAlertBox(
       {this.context,
-      this.title,
-      this.messageText,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.messageText,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -282,14 +282,14 @@ class DangerAlertBox {
   final String buttonText;
   DangerAlertBox(
       {this.context,
-      this.title,
-      this.messageText,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.messageText,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -368,14 +368,14 @@ class WarningAlertBox {
   final String buttonText;
   WarningAlertBox(
       {this.context,
-      this.title,
-      this.messageText,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.messageText,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -454,14 +454,14 @@ class DarkAlertBox {
   final String buttonText;
   DarkAlertBox(
       {this.context,
-      this.title,
-      this.messageText,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.messageText,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -543,14 +543,14 @@ class SimpleAlertBoxCenter {
   final String buttonText;
   SimpleAlertBoxCenter(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -620,14 +620,14 @@ class InfoAlertBoxCenter {
   final String buttonText;
   InfoAlertBoxCenter(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -697,20 +697,20 @@ class SuccessAlertBoxCenter {
   final String buttonText;
   SuccessAlertBoxCenter(
       {this.context,
-      this.messageText,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.messageText,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
         builder: (BuildContext context) {
           return SimpleDialog(
             shape:
-                Border(bottom: BorderSide(width: 2, color: Color(0xFF4CB051))),
+            Border(bottom: BorderSide(width: 2, color: Color(0xFF4CB051))),
             contentPadding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
             children: <Widget>[
               Center(
@@ -763,20 +763,20 @@ class DangerAlertBoxCenter {
   final String buttonText;
   DangerAlertBoxCenter(
       {this.context,
-      this.messageText,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.messageText,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
         builder: (BuildContext context) {
           return SimpleDialog(
             shape:
-                Border(bottom: BorderSide(width: 2, color: Color(0xFFFF5455))),
+            Border(bottom: BorderSide(width: 2, color: Color(0xFFFF5455))),
             contentPadding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
             children: <Widget>[
               Center(
@@ -840,20 +840,20 @@ class WarningAlertBoxCenter {
   final String buttonText;
   WarningAlertBoxCenter(
       {this.context,
-      this.messageText,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.messageText,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
         builder: (BuildContext context) {
           return SimpleDialog(
             shape:
-                Border(bottom: BorderSide(width: 2, color: Color(0xFFFF9800))),
+            Border(bottom: BorderSide(width: 2, color: Color(0xFFFF9800))),
             contentPadding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
             children: <Widget>[
               Center(
@@ -917,13 +917,13 @@ class DarkAlertBoxCenter {
   final String buttonText;
   DarkAlertBoxCenter(
       {this.context,
-      this.messageText,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.messageText,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -931,7 +931,7 @@ class DarkAlertBoxCenter {
           return SimpleDialog(
             backgroundColor: Color(0xFF20242A),
             shape:
-                Border(bottom: BorderSide(width: 2, color: Color(0xFF343436))),
+            Border(bottom: BorderSide(width: 2, color: Color(0xFF343436))),
             contentPadding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
             children: <Widget>[
               Center(
@@ -1006,19 +1006,19 @@ class ConfirmAlertBox {
   final Function onPressedNo;
   ConfirmAlertBox(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColorForYes,
-      this.buttonTextForYes,
-      this.buttonTextColorForYes,
-      this.buttonColorForNo,
-      this.buttonTextColorForNo,
-      this.buttonTextForNo,
-      this.onPressedYes,
-      this.onPressedNo,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColorForYes,
+        this.buttonTextForYes,
+        this.buttonTextColorForYes,
+        this.buttonColorForNo,
+        this.buttonTextColorForNo,
+        this.buttonTextForNo,
+        this.onPressedYes,
+        this.onPressedNo,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -1027,7 +1027,7 @@ class ConfirmAlertBox {
             title: Row(
               children: <Widget>[
                 Icon(
-                  Icons.help,
+                  icon ?? Icons.help,
                   color: titleTextColor,
                 ),
                 SizedBox(
@@ -1067,7 +1067,7 @@ class ConfirmAlertBox {
                   FlatButton(
                     color: buttonColorForNo ?? Colors.red,
                     onPressed: onPressedNo ??
-                        () {
+                            () {
                           Navigator.of(context).pop();
                         },
                     child: Text(
@@ -1120,19 +1120,19 @@ class ConfirmAlertBoxDark {
   final Function onPressedNo;
   ConfirmAlertBoxDark(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColorForYes,
-      this.buttonTextForYes,
-      this.buttonTextColorForYes,
-      this.buttonColorForNo,
-      this.buttonTextColorForNo,
-      this.buttonTextForNo,
-      this.onPressedYes,
-      this.onPressedNo,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColorForYes,
+        this.buttonTextForYes,
+        this.buttonTextColorForYes,
+        this.buttonColorForNo,
+        this.buttonTextColorForNo,
+        this.buttonTextForNo,
+        this.onPressedYes,
+        this.onPressedNo,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -1142,7 +1142,7 @@ class ConfirmAlertBoxDark {
             title: Row(
               children: <Widget>[
                 Icon(
-                  Icons.help,
+                  icon ?? Icons.help,
                   color: titleTextColor ?? Color(0xFF4E4E4E),
                 ),
                 SizedBox(
@@ -1182,7 +1182,7 @@ class ConfirmAlertBoxDark {
                   FlatButton(
                     color: buttonColorForNo ?? Color(0xFF4E4E4E),
                     onPressed: onPressedNo ??
-                        () {
+                            () {
                           Navigator.of(context).pop();
                         },
                     child: Text(
@@ -1235,19 +1235,19 @@ class DeleteAlertBox {
   final Function onPressedNo;
   DeleteAlertBox(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColorForYes,
-      this.buttonTextForYes,
-      this.buttonTextColorForYes,
-      this.buttonColorForNo,
-      this.buttonTextColorForNo,
-      this.buttonTextForNo,
-      this.onPressedYes,
-      this.onPressedNo,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColorForYes,
+        this.buttonTextForYes,
+        this.buttonTextColorForYes,
+        this.buttonColorForNo,
+        this.buttonTextColorForNo,
+        this.buttonTextForNo,
+        this.onPressedYes,
+        this.onPressedNo,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -1256,7 +1256,7 @@ class DeleteAlertBox {
               title: Row(
                 children: <Widget>[
                   Icon(
-                    Icons.delete,
+                    icon ?? Icons.delete,
                     color: titleTextColor,
                   ),
                   SizedBox(
@@ -1286,7 +1286,7 @@ class DeleteAlertBox {
                       FlatButton(
                         color: buttonColorForNo ?? Colors.red[600],
                         onPressed: onPressedNo ??
-                            () {
+                                () {
                               Navigator.of(context).pop();
                             },
                         child: Text(
@@ -1340,14 +1340,14 @@ class SuccessBgAlertBox {
   final String buttonText;
   SuccessBgAlertBox(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -1357,23 +1357,23 @@ class SuccessBgAlertBox {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Icon(
-                  Icons.notifications,
+                  icon ?? Icons.notifications,
                   color: titleTextColor ?? Colors.white,
                   size: 90.0,
                 ),
                 Flexible(
                     child: Text(
-                  title ?? "Your alert title",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: titleTextColor ?? Colors.white),
-                )),
+                      title ?? "Your alert title",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: titleTextColor ?? Colors.white),
+                    )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1396,7 +1396,7 @@ class SuccessBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                            TextStyle(color: buttonTextColor ?? Colors.black),
+                        TextStyle(color: buttonTextColor ?? Colors.black),
                       ),
                     ],
                   ),
@@ -1433,14 +1433,14 @@ class DangerBgAlertBox {
   final String buttonText;
   DangerBgAlertBox(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -1450,23 +1450,23 @@ class DangerBgAlertBox {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Icon(
-                  Icons.notifications,
+                  icon ?? Icons.notifications,
                   color: titleTextColor ?? Colors.white,
                   size: 90.0,
                 ),
                 Flexible(
                     child: Text(
-                  title ?? "Your alert title",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: titleTextColor ?? Colors.white),
-                )),
+                      title ?? "Your alert title",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: titleTextColor ?? Colors.white),
+                    )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1489,7 +1489,7 @@ class DangerBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                            TextStyle(color: buttonTextColor ?? Colors.black),
+                        TextStyle(color: buttonTextColor ?? Colors.black),
                       ),
                     ],
                   ),
@@ -1525,14 +1525,14 @@ class WarningBgAlertBox {
   final String buttonText;
   WarningBgAlertBox(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -1542,23 +1542,23 @@ class WarningBgAlertBox {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Icon(
-                  Icons.notifications,
+                  icon ?? Icons.notifications,
                   color: titleTextColor ?? Colors.white,
                   size: 90.0,
                 ),
                 Flexible(
                     child: Text(
-                  title ?? "Your alert title",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: titleTextColor ?? Colors.white),
-                )),
+                      title ?? "Your alert title",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: titleTextColor ?? Colors.white),
+                    )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1581,7 +1581,7 @@ class WarningBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                            TextStyle(color: buttonTextColor ?? Colors.black),
+                        TextStyle(color: buttonTextColor ?? Colors.black),
                       ),
                     ],
                   ),
@@ -1618,14 +1618,14 @@ class InfoBgAlertBox {
   final String buttonText;
   InfoBgAlertBox(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -1635,23 +1635,23 @@ class InfoBgAlertBox {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Icon(
-                  Icons.notifications,
+                  icon ?? Icons.notifications,
                   color: titleTextColor ?? Colors.white,
                   size: 90.0,
                 ),
                 Flexible(
                     child: Text(
-                  title ?? "Your alert title",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: titleTextColor ?? Colors.white),
-                )),
+                      title ?? "Your alert title",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: titleTextColor ?? Colors.white),
+                    )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1674,7 +1674,7 @@ class InfoBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                            TextStyle(color: buttonTextColor ?? Colors.black),
+                        TextStyle(color: buttonTextColor ?? Colors.black),
                       ),
                     ],
                   ),
@@ -1711,14 +1711,14 @@ class DarkBgAlertBox {
   final String buttonText;
   DarkBgAlertBox(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -1728,23 +1728,23 @@ class DarkBgAlertBox {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Icon(
-                  Icons.notifications,
+                  icon ?? Icons.notifications,
                   color: titleTextColor ?? Color(0xFF4E4E4E),
                   size: 90.0,
                 ),
                 Flexible(
                     child: Text(
-                  title ?? "Your alert title",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: titleTextColor ?? Color(0xFF4E4E4E)),
-                )),
+                      title ?? "Your alert title",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: titleTextColor ?? Color(0xFF4E4E4E)),
+                    )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1752,7 +1752,7 @@ class DarkBgAlertBox {
                   child: Text(
                     infoMessage ?? "Alert message here",
                     style:
-                        TextStyle(color: messageTextColor ?? Color(0xFF4E4E4E)),
+                    TextStyle(color: messageTextColor ?? Color(0xFF4E4E4E)),
                   ),
                 ),
                 FlatButton(
@@ -1768,7 +1768,7 @@ class DarkBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                            TextStyle(color: buttonTextColor ?? Colors.white),
+                        TextStyle(color: buttonTextColor ?? Colors.white),
                       ),
                     ],
                   ),
@@ -1805,14 +1805,14 @@ class SimpleBgAlertBox {
   final String buttonText;
   SimpleBgAlertBox(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -1822,23 +1822,23 @@ class SimpleBgAlertBox {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Icon(
-                  Icons.notifications,
+                  icon ?? Icons.notifications,
                   color: titleTextColor ?? Color(0xFF4E4E4E),
                   size: 90.0,
                 ),
                 Flexible(
                     child: Text(
-                  title ?? "Your alert title",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: titleTextColor ?? Color(0xFF4E4E4E)),
-                )),
+                      title ?? "Your alert title",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: titleTextColor ?? Color(0xFF4E4E4E)),
+                    )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1846,7 +1846,7 @@ class SimpleBgAlertBox {
                   child: Text(
                     infoMessage ?? "Alert message here",
                     style:
-                        TextStyle(color: messageTextColor ?? Color(0xFF4E4E4E)),
+                    TextStyle(color: messageTextColor ?? Color(0xFF4E4E4E)),
                   ),
                 ),
                 FlatButton(
@@ -1862,7 +1862,7 @@ class SimpleBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                            TextStyle(color: buttonTextColor ?? Colors.white),
+                        TextStyle(color: buttonTextColor ?? Colors.white),
                       ),
                     ],
                   ),
@@ -1900,15 +1900,15 @@ class CustomBgAlertBox {
   final String buttonText;
   CustomBgAlertBox(
       {this.context,
-      this.title,
-      this.infoMessage,
-      this.titleTextColor,
-      this.messageTextColor,
-      this.buttonColor,
-      this.buttonText,
-      this.buttonTextColor,
-      this.bgColor,
-      this.icon}) {
+        this.title,
+        this.infoMessage,
+        this.titleTextColor,
+        this.messageTextColor,
+        this.buttonColor,
+        this.buttonText,
+        this.buttonTextColor,
+        this.bgColor,
+        this.icon}) {
     showDialog(
         barrierDismissible: false,
         context: context,
@@ -1918,23 +1918,23 @@ class CustomBgAlertBox {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Icon(
-                  Icons.notifications,
+                  icon ?? Icons.notifications,
                   color: titleTextColor ?? Colors.black,
                   size: 90.0,
                 ),
                 Flexible(
                     child: Text(
-                  title ?? "Your alert title",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: titleTextColor ?? Colors.black),
-                )),
+                      title ?? "Your alert title",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: titleTextColor ?? Colors.black),
+                    )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1957,7 +1957,7 @@ class CustomBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                            TextStyle(color: buttonTextColor ?? Colors.white),
+                        TextStyle(color: buttonTextColor ?? Colors.white),
                       ),
                     ],
                   ),
