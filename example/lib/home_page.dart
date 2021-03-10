@@ -239,7 +239,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   color: Colors.red,
                   child: Text(
-                    "Delete Box",
+                    "Success BG Alert Box",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -252,7 +252,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   color: Colors.red,
                   child: Text(
-                    "Delete Box",
+                    "Danger BG Alert Box",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -265,7 +265,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   color: Colors.red,
                   child: Text(
-                    "Delete Box",
+                    "Warning BG Alert Box",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -278,7 +278,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   color: Colors.red,
                   child: Text(
-                    "Delete Box",
+                    "Info BG Alert Box",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -291,7 +291,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   color: Colors.red,
                   child: Text(
-                    "Dark BG Box",
+                    "Dark BG Alert Box",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
@@ -304,7 +304,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   color: Colors.red,
                   child: Text(
-                    "Dark BG Box",
+                    "Simple BG Alert Box",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
