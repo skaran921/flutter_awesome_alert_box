@@ -3,39 +3,39 @@ library flutter_awesome_alert_box;
 import 'package:flutter/material.dart';
 
 //
-// ******************************[SimpleAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its black
-// [messageColor] used for main message text color by default its black
-// [buttonColor] used for button background color by default its blue
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[SimpleAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its black
+/// [messageColor] used for main message text color by default its black
+/// [buttonColor] used for button background color by default its blue
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class SimpleAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   SimpleAlertBox(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             title: Row(
@@ -66,8 +66,10 @@ class SimpleAlertBox {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColor ?? Colors.blue,
+                  TextButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            buttonColor ?? Colors.blue)),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -84,43 +86,43 @@ class SimpleAlertBox {
   }
 }
 
-// ******************************[SimpleAlertBox]******************************
+/// ******************************[SimpleAlertBox]******************************
 //
 
 //
-// ******************************[InfoAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its black
-// [messageColor] used for main message text color by default its black
-// [buttonColor] used for button background color by default its blue
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[InfoAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its black
+/// [messageColor] used for main message text color by default its black
+/// [buttonColor] used for button background color by default its blue
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class InfoAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   InfoAlertBox(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             shape: Border(left: BorderSide(width: 2, color: Color(0xFF3DC0F1))),
@@ -152,8 +154,10 @@ class InfoAlertBox {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColor ?? Colors.blue,
+                  TextButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            buttonColor ?? Colors.blue)),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -170,43 +174,43 @@ class InfoAlertBox {
   }
 }
 
-// ******************************[InfoAlertBox]******************************
+/// ******************************[InfoAlertBox]******************************
 //
 
 //
-// ******************************[SuccessAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its black
-// [messageColor] used for main message text color by default its black
-// [buttonColor] used for button background color by default its green
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[SuccessAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its black
+/// [messageColor] used for main message text color by default its black
+/// [buttonColor] used for button background color by default its green
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class SuccessAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String messageText;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? messageText;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   SuccessAlertBox(
       {this.context,
-        this.title,
-        this.messageText,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.messageText,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             shape: Border(left: BorderSide(width: 2, color: Color(0xFF4CB051))),
@@ -238,8 +242,10 @@ class SuccessAlertBox {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColor ?? Color(0xFF4CB051),
+                  TextButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            buttonColor ?? Color(0xFF4CB051))),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -256,43 +262,43 @@ class SuccessAlertBox {
   }
 }
 
-// ******************************[SuccessAlertBox]******************************
+/// ******************************[SuccessAlertBox]******************************
 //
 
 //
-// ******************************[DangerAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its black
-// [messageColor] used for main message text color by default its black
-// [buttonColor] used for button background color by default its red
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[DangerAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its black
+/// [messageColor] used for main message text color by default its black
+/// [buttonColor] used for button background color by default its red
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class DangerAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String messageText;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? messageText;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   DangerAlertBox(
       {this.context,
-        this.title,
-        this.messageText,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.messageText,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             shape: Border(left: BorderSide(width: 2, color: Color(0xFFFF5455))),
@@ -324,8 +330,10 @@ class DangerAlertBox {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColor ?? Color(0xFFFF5455),
+                  TextButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            buttonColor ?? Color(0xFFFF5455))),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -342,43 +350,43 @@ class DangerAlertBox {
   }
 }
 
-// ******************************[DangerAlertBox]******************************
+/// ******************************[DangerAlertBox]******************************
 //
 
 //
-// ******************************[WarningAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its black
-// [messageColor] used for main message text color by default its black
-// [buttonColor] used for button background color by default its orange
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[WarningAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its black
+/// [messageColor] used for main message text color by default its black
+/// [buttonColor] used for button background color by default its orange
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class WarningAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String messageText;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? messageText;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   WarningAlertBox(
       {this.context,
-        this.title,
-        this.messageText,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.messageText,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             shape: Border(left: BorderSide(width: 2, color: Color(0xFFFF9800))),
@@ -410,8 +418,10 @@ class WarningAlertBox {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColor ?? Color(0xFFFF9800),
+                  TextButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            buttonColor ?? Color(0xFFFF9800))),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -428,43 +438,43 @@ class WarningAlertBox {
   }
 }
 
-// ******************************[WarningAlertBox]******************************
+/// ******************************[WarningAlertBox]******************************
 //
 
 //
-// ******************************[DarkAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its `Color(0xFF4E4E4E)`
-// [messageColor] used for main message text color by default its `Color(0xFF4E4E4E)`
-// [buttonColor] used for button background color by default its `Color(0xFF4E4E4E)`
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[DarkAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its `Color(0xFF4E4E4E)`
+/// [messageColor] used for main message text color by default its `Color(0xFF4E4E4E)`
+/// [buttonColor] used for button background color by default its `Color(0xFF4E4E4E)`
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class DarkAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String messageText;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? messageText;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   DarkAlertBox(
       {this.context,
-        this.title,
-        this.messageText,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.messageText,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             backgroundColor: Color(0xFF20242A),
@@ -499,8 +509,10 @@ class DarkAlertBox {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColor ?? Color(0xFF4E4E4E),
+                  TextButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            buttonColor ?? Color(0xFF4E4E4E))),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -517,49 +529,49 @@ class DarkAlertBox {
   }
 }
 
-// ******************************[DarkAlertBox]******************************
+/// ******************************[DarkAlertBox]******************************
 //
 
 //
-// ******************************[SimpleAlertBoxCenter]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its black
-// [messageColor] used for main message text color by default its black
-// [buttonColor] used for button background color by default its blue
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[SimpleAlertBoxCenter]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its black
+/// [messageColor] used for main message text color by default its black
+/// [buttonColor] used for button background color by default its blue
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class SimpleAlertBoxCenter {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   SimpleAlertBoxCenter(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             contentPadding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
             children: <Widget>[
               Center(
-                child: icon ??
+                child: icon as Widget? ??
                     Icon(
                       Icons.info,
                       color: Colors.blue,
@@ -576,8 +588,10 @@ class SimpleAlertBoxCenter {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColor ?? Colors.blue,
+                  TextButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            buttonColor ?? Colors.blue)),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -594,50 +608,50 @@ class SimpleAlertBoxCenter {
   }
 }
 
-// ******************************[SimpleAlertBoxCenter]******************************
+/// ******************************[SimpleAlertBoxCenter]******************************
 //
 
 //
-// ******************************[InfoAlertBoxCenter]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its black
-// [messageColor] used for main message text color by default its black
-// [buttonColor] used for button background color by default its blue
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[InfoAlertBoxCenter]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its black
+/// [messageColor] used for main message text color by default its black
+/// [buttonColor] used for button background color by default its blue
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class InfoAlertBoxCenter {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   InfoAlertBoxCenter(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             shape: Border(bottom: BorderSide(width: 2, color: Colors.blue)),
             contentPadding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
             children: <Widget>[
               Center(
-                child: icon ??
+                child: icon as Widget? ??
                     Icon(
                       Icons.info,
                       color: Colors.blue,
@@ -654,8 +668,10 @@ class InfoAlertBoxCenter {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColor ?? Colors.blue,
+                  TextButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            buttonColor ?? Colors.blue)),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -672,49 +688,49 @@ class InfoAlertBoxCenter {
   }
 }
 
-// ******************************[InfoAlertBoxCenter]******************************
+/// ******************************[InfoAlertBoxCenter]******************************
 //
 
 //
-// ******************************[SuccessAlertBoxCenter]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its black
-// [messageColor] used for main message text color by default its black
-// [buttonColor] used for button background color by default its green
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[SuccessAlertBoxCenter]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its black
+/// [messageColor] used for main message text color by default its black
+/// [buttonColor] used for button background color by default its green
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class SuccessAlertBoxCenter {
-  final BuildContext context;
-  final IconData icon;
-  final String messageText;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final IconData? icon;
+  final String? messageText;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   SuccessAlertBoxCenter(
       {this.context,
-        this.messageText,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.messageText,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             shape:
-            Border(bottom: BorderSide(width: 2, color: Color(0xFF4CB051))),
+                Border(bottom: BorderSide(width: 2, color: Color(0xFF4CB051))),
             contentPadding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
             children: <Widget>[
               Center(
-                child: icon ??
+                child: icon as Widget? ??
                     Icon(
                       Icons.info,
                       color: Color(0xFF4CB051),
@@ -731,8 +747,10 @@ class SuccessAlertBoxCenter {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColor ?? Color(0xFF4CB051),
+                  TextButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                            buttonColor ?? Color(0xFF4CB051))),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -749,38 +767,38 @@ class SuccessAlertBoxCenter {
   }
 }
 
-// ******************************[SuccessAlertBoxCenter]******************************
+/// ******************************[SuccessAlertBoxCenter]******************************
 //
 
 class DangerAlertBoxCenter {
-  final BuildContext context;
-  final IconData icon;
-  final String messageText;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final IconData? icon;
+  final String? messageText;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   DangerAlertBoxCenter(
       {this.context,
-        this.messageText,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.messageText,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             shape:
-            Border(bottom: BorderSide(width: 2, color: Color(0xFFFF5455))),
+                Border(bottom: BorderSide(width: 2, color: Color(0xFFFF5455))),
             contentPadding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
             children: <Widget>[
               Center(
-                child: icon ??
+                child: icon as Widget? ??
                     Icon(
                       Icons.info,
                       color: Color(0xFFFF5455),
@@ -797,8 +815,11 @@ class DangerAlertBoxCenter {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColor ?? Color(0xFFFF5455),
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColor ?? Color(0xFFFF5455)),
+                    ),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -815,49 +836,49 @@ class DangerAlertBoxCenter {
   }
 }
 
-// ******************************[DangerAlertBox]******************************
+/// ******************************[DangerAlertBox]******************************
 //
 
 //
-// ******************************[WarningAlertBoxCenter]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its black
-// [messageColor] used for main message text color by default its black
-// [buttonColor] used for button background color by default its orange
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[WarningAlertBoxCenter]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its black
+/// [messageColor] used for main message text color by default its black
+/// [buttonColor] used for button background color by default its orange
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class WarningAlertBoxCenter {
-  final BuildContext context;
-  final IconData icon;
-  final String messageText;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final IconData? icon;
+  final String? messageText;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   WarningAlertBoxCenter(
       {this.context,
-        this.messageText,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.messageText,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             shape:
-            Border(bottom: BorderSide(width: 2, color: Color(0xFFFF9800))),
+                Border(bottom: BorderSide(width: 2, color: Color(0xFFFF9800))),
             contentPadding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
             children: <Widget>[
               Center(
-                child: icon ??
+                child: icon as Widget? ??
                     Icon(
                       Icons.warning,
                       color: Color(0xFFFF9800),
@@ -874,8 +895,11 @@ class WarningAlertBoxCenter {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColor ?? Color(0xFFFF9800),
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColor ?? Color(0xFFFF9800)),
+                    ),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -892,50 +916,50 @@ class WarningAlertBoxCenter {
   }
 }
 
-// ******************************[WarningAlertBoxCenter]******************************
+/// ******************************[WarningAlertBoxCenter]******************************
 //
 
 //
-// ******************************[DarkAlertBoxCenter]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its `Color(0xFF4E4E4E)`
-// [messageColor] used for main message text color by default its `Color(0xFF4E4E4E)`
-// [buttonColor] used for button background color by default its `Color(0xFF4E4E4E)`
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[DarkAlertBoxCenter]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its `Color(0xFF4E4E4E)`
+/// [messageColor] used for main message text color by default its `Color(0xFF4E4E4E)`
+/// [buttonColor] used for button background color by default its `Color(0xFF4E4E4E)`
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class DarkAlertBoxCenter {
-  final BuildContext context;
-  final IconData icon;
-  final String messageText;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final IconData? icon;
+  final String? messageText;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   DarkAlertBoxCenter(
       {this.context,
-        this.messageText,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.messageText,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             backgroundColor: Color(0xFF20242A),
             shape:
-            Border(bottom: BorderSide(width: 2, color: Color(0xFF343436))),
+                Border(bottom: BorderSide(width: 2, color: Color(0xFF343436))),
             contentPadding: const EdgeInsets.fromLTRB(24, 12, 24, 12),
             children: <Widget>[
               Center(
-                child: icon ??
+                child: icon as Widget? ??
                     Icon(
                       Icons.face,
                       color: Color(0xFF4E4E4E),
@@ -952,8 +976,11 @@ class DarkAlertBoxCenter {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColor ?? Color(0xFF4E4E4E),
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColor ?? Color(0xFF4E4E4E)),
+                    ),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -970,58 +997,58 @@ class DarkAlertBoxCenter {
   }
 }
 
-// ******************************[DarkAlertBox]******************************
+/// ******************************[DarkAlertBox]******************************
 //
 
 //
-// ******************************[ConfirmAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its black
-// [messageColor] used for main message text color by default its black
-// [buttonColorForYes] used for button background color by default its Green
-// [buttonTextColorForYes] used for button text color by default its white
-// [buttonTextForYes] used for button text value by default its "Yes"
-// [buttonColorForNo] used for button background color by default its Red
-// [buttonTextColorForNo] used for button text color by default its white
-// [buttonTextForNo] used for button text value by default its "No"
-// [onPressedYes] is a function that will call when onpressed Yes button
-// [onPressedNo] is a function that will call when onpressed No button
+/// ******************************[ConfirmAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its black
+/// [messageColor] used for main message text color by default its black
+/// [buttonColorForYes] used for button background color by default its Green
+/// [buttonTextColorForYes] used for button text color by default its white
+/// [buttonTextForYes] used for button text value by default its "Yes"
+/// [buttonColorForNo] used for button background color by default its Red
+/// [buttonTextColorForNo] used for button text color by default its white
+/// [buttonTextForNo] used for button text value by default its "No"
+/// [onPressedYes] is a function that will call when onpressed Yes button
+/// [onPressedNo] is a function that will call when onpressed No button
 //
 class ConfirmAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColorForYes;
-  final Color buttonTextColorForYes;
-  final String buttonTextForYes;
-  final Color buttonColorForNo;
-  final Color buttonTextColorForNo;
-  final String buttonTextForNo;
-  final Function onPressedYes;
-  final Function onPressedNo;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColorForYes;
+  final Color? buttonTextColorForYes;
+  final String? buttonTextForYes;
+  final Color? buttonColorForNo;
+  final Color? buttonTextColorForNo;
+  final String? buttonTextForNo;
+  final Function? onPressedYes;
+  final Function? onPressedNo;
   ConfirmAlertBox(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColorForYes,
-        this.buttonTextForYes,
-        this.buttonTextColorForYes,
-        this.buttonColorForNo,
-        this.buttonTextColorForNo,
-        this.buttonTextForNo,
-        this.onPressedYes,
-        this.onPressedNo,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColorForYes,
+      this.buttonTextForYes,
+      this.buttonTextColorForYes,
+      this.buttonColorForNo,
+      this.buttonTextColorForNo,
+      this.buttonTextForNo,
+      this.onPressedYes,
+      this.onPressedNo,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             title: Row(
@@ -1052,9 +1079,12 @@ class ConfirmAlertBox {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColorForYes ?? Colors.green,
-                    onPressed: onPressedYes ?? () {},
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColorForYes ?? Colors.green),
+                    ),
+                    onPressed: onPressedYes as void Function()? ?? () {},
                     child: Text(
                       buttonTextForYes ?? "Yes",
                       style: TextStyle(
@@ -1064,10 +1094,13 @@ class ConfirmAlertBox {
                   SizedBox(
                     width: 4,
                   ),
-                  FlatButton(
-                    color: buttonColorForNo ?? Colors.red,
-                    onPressed: onPressedNo ??
-                            () {
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColorForNo ?? Colors.red),
+                    ),
+                    onPressed: onPressedNo as void Function()? ??
+                        () {
                           Navigator.of(context).pop();
                         },
                     child: Text(
@@ -1084,58 +1117,58 @@ class ConfirmAlertBox {
   }
 }
 
-// ******************************[ConfirmAlertBox]******************************
+/// ******************************[ConfirmAlertBox]******************************
 //
 
 //
-// ******************************[ConfirmAlertBoxDark]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its black
-// [messageColor] used for main message text color by default its black
-// [buttonColorForYes] used for button background color by default its Green
-// [buttonTextColorForYes] used for button text color by default its white
-// [buttonTextForYes] used for button text value by default its "Yes"
-// [buttonColorForNo] used for button background color by default its Red
-// [buttonTextColorForNo] used for button text color by default its white
-// [buttonTextForNo] used for button text value by default its "No"
-// [onPressedYes] is a function that will call when onpressed Yes button
-// [onPressedNo] is a function that will call when onpressed No button
+/// ******************************[ConfirmAlertBoxDark]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its black
+/// [messageColor] used for main message text color by default its black
+/// [buttonColorForYes] used for button background color by default its Green
+/// [buttonTextColorForYes] used for button text color by default its white
+/// [buttonTextForYes] used for button text value by default its "Yes"
+/// [buttonColorForNo] used for button background color by default its Red
+/// [buttonTextColorForNo] used for button text color by default its white
+/// [buttonTextForNo] used for button text value by default its "No"
+/// [onPressedYes] is a function that will call when onpressed Yes button
+/// [onPressedNo] is a function that will call when onpressed No button
 //
 class ConfirmAlertBoxDark {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColorForYes;
-  final Color buttonTextColorForYes;
-  final String buttonTextForYes;
-  final Color buttonColorForNo;
-  final Color buttonTextColorForNo;
-  final String buttonTextForNo;
-  final Function onPressedYes;
-  final Function onPressedNo;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColorForYes;
+  final Color? buttonTextColorForYes;
+  final String? buttonTextForYes;
+  final Color? buttonColorForNo;
+  final Color? buttonTextColorForNo;
+  final String? buttonTextForNo;
+  final Function? onPressedYes;
+  final Function? onPressedNo;
   ConfirmAlertBoxDark(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColorForYes,
-        this.buttonTextForYes,
-        this.buttonTextColorForYes,
-        this.buttonColorForNo,
-        this.buttonTextColorForNo,
-        this.buttonTextForNo,
-        this.onPressedYes,
-        this.onPressedNo,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColorForYes,
+      this.buttonTextForYes,
+      this.buttonTextColorForYes,
+      this.buttonColorForNo,
+      this.buttonTextColorForNo,
+      this.buttonTextForNo,
+      this.onPressedYes,
+      this.onPressedNo,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return SimpleDialog(
             backgroundColor: Color(0xFF20242A),
@@ -1167,9 +1200,12 @@ class ConfirmAlertBoxDark {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  FlatButton(
-                    color: buttonColorForYes ?? Color(0xFF4E4E4E),
-                    onPressed: onPressedYes ?? () {},
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColorForYes ?? Color(0xFF4E4E4E)),
+                    ),
+                    onPressed: onPressedYes as void Function()? ?? () {},
                     child: Text(
                       buttonTextForYes ?? "Yes",
                       style: TextStyle(
@@ -1179,10 +1215,13 @@ class ConfirmAlertBoxDark {
                   SizedBox(
                     width: 4,
                   ),
-                  FlatButton(
-                    color: buttonColorForNo ?? Color(0xFF4E4E4E),
-                    onPressed: onPressedNo ??
-                            () {
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColorForNo ?? Color(0xFF4E4E4E)),
+                    ),
+                    onPressed: onPressedNo as void Function()? ??
+                        () {
                           Navigator.of(context).pop();
                         },
                     child: Text(
@@ -1199,58 +1238,58 @@ class ConfirmAlertBoxDark {
   }
 }
 
-// ******************************[ConfirmAlertBoxDark]******************************
+/// ******************************[ConfirmAlertBoxDark]******************************
 //
 
 //
-// ******************************[DeleteAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its black
-// [messageColor] used for main message text color by default its black
-// [buttonColorForYes] used for button background color by default its Green
-// [buttonTextColorForYes] used for button text color by default its white
-// [buttonTextForYes] used for button text value by default its "Yes"
-// [buttonColorForNo] used for button background color by default its Red
-// [buttonTextColorForNo] used for button text color by default its white
-// [buttonTextForNo] used for button text value by default its "No"
-// [onPressedYes] is a function that will call when onpressed Yes button
-// [onPressedNo] is a function that will call when onpressed No button
+/// ******************************[DeleteAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its black
+/// [messageColor] used for main message text color by default its black
+/// [buttonColorForYes] used for button background color by default its Green
+/// [buttonTextColorForYes] used for button text color by default its white
+/// [buttonTextForYes] used for button text value by default its "Yes"
+/// [buttonColorForNo] used for button background color by default its Red
+/// [buttonTextColorForNo] used for button text color by default its white
+/// [buttonTextForNo] used for button text value by default its "No"
+/// [onPressedYes] is a function that will call when onpressed Yes button
+/// [onPressedNo] is a function that will call when onpressed No button
 //
 class DeleteAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColorForYes;
-  final Color buttonTextColorForYes;
-  final String buttonTextForYes;
-  final Color buttonColorForNo;
-  final Color buttonTextColorForNo;
-  final String buttonTextForNo;
-  final Function onPressedYes;
-  final Function onPressedNo;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColorForYes;
+  final Color? buttonTextColorForYes;
+  final String? buttonTextForYes;
+  final Color? buttonColorForNo;
+  final Color? buttonTextColorForNo;
+  final String? buttonTextForNo;
+  final Function? onPressedYes;
+  final Function? onPressedNo;
   DeleteAlertBox(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColorForYes,
-        this.buttonTextForYes,
-        this.buttonTextColorForYes,
-        this.buttonColorForNo,
-        this.buttonTextColorForNo,
-        this.buttonTextForNo,
-        this.onPressedYes,
-        this.onPressedNo,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColorForYes,
+      this.buttonTextForYes,
+      this.buttonTextColorForYes,
+      this.buttonColorForNo,
+      this.buttonTextColorForNo,
+      this.buttonTextForNo,
+      this.onPressedYes,
+      this.onPressedNo,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return AlertDialog(
               title: Row(
@@ -1283,10 +1322,13 @@ class DeleteAlertBox {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
-                      FlatButton(
-                        color: buttonColorForNo ?? Colors.red[600],
-                        onPressed: onPressedNo ??
-                                () {
+                      TextButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                              buttonColorForNo ?? Colors.red[600]),
+                        ),
+                        onPressed: onPressedNo as void Function()? ??
+                            () {
                               Navigator.of(context).pop();
                             },
                         child: Text(
@@ -1298,9 +1340,12 @@ class DeleteAlertBox {
                       SizedBox(
                         width: 4,
                       ),
-                      FlatButton(
-                        color: buttonColorForYes ?? Colors.green[600],
-                        onPressed: onPressedYes ?? () {},
+                      TextButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                              buttonColorForYes ?? Colors.green[600]),
+                        ),
+                        onPressed: onPressedYes as void Function()? ?? () {},
                         child: Text(
                           buttonTextForYes ?? "Delete",
                           style: TextStyle(
@@ -1315,49 +1360,49 @@ class DeleteAlertBox {
   }
 }
 
-// ******************************[ConfirmAlertBox]******************************
+/// ******************************[ConfirmAlertBox]******************************
 //
 
-// ******************************[SuccessBgAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its white
-// [messageColor] used for main message text color by default its white
-// [buttonColor] used for button background color by default its white
-// [buttonTextColor] used for button text color by default its black
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[SuccessBgAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its white
+/// [messageColor] used for main message text color by default its white
+/// [buttonColor] used for button background color by default its white
+/// [buttonTextColor] used for button text color by default its black
+/// [buttonText] used for button text value by default its "Close"
 //
 class SuccessBgAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   SuccessBgAlertBox(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return AlertDialog(
             backgroundColor: Color(0xFF6ab04c),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -1369,11 +1414,11 @@ class SuccessBgAlertBox {
                 ),
                 Flexible(
                     child: Text(
-                      title ?? "Your alert title",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: titleTextColor ?? Colors.white),
-                    )),
+                  title ?? "Your alert title",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: titleTextColor ?? Colors.white),
+                )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1383,10 +1428,13 @@ class SuccessBgAlertBox {
                     style: TextStyle(color: messageTextColor ?? Colors.white),
                   ),
                 ),
-                FlatButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(9.0))),
-                  color: buttonColor ?? Colors.white,
+                TextButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColor ?? Colors.white),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(9.0))))),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -1396,7 +1444,7 @@ class SuccessBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                        TextStyle(color: buttonTextColor ?? Colors.black),
+                            TextStyle(color: buttonTextColor ?? Colors.black),
                       ),
                     ],
                   ),
@@ -1408,49 +1456,49 @@ class SuccessBgAlertBox {
   }
 }
 
-// ******************************[SimpleAlertBox]******************************
+/// ******************************[SimpleAlertBox]******************************
 //
 
-// ******************************[DangerBgAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its white
-// [messageColor] used for main message text color by default its white
-// [buttonColor] used for button background color by default its white
-// [buttonTextColor] used for button text color by default its black
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[DangerBgAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its white
+/// [messageColor] used for main message text color by default its white
+/// [buttonColor] used for button background color by default its white
+/// [buttonTextColor] used for button text color by default its black
+/// [buttonText] used for button text value by default its "Close"
 //
 class DangerBgAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   DangerBgAlertBox(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return AlertDialog(
             backgroundColor: Colors.red,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -1462,11 +1510,11 @@ class DangerBgAlertBox {
                 ),
                 Flexible(
                     child: Text(
-                      title ?? "Your alert title",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: titleTextColor ?? Colors.white),
-                    )),
+                  title ?? "Your alert title",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: titleTextColor ?? Colors.white),
+                )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1476,10 +1524,13 @@ class DangerBgAlertBox {
                     style: TextStyle(color: messageTextColor ?? Colors.white),
                   ),
                 ),
-                FlatButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(9.0))),
-                  color: buttonColor ?? Colors.white,
+                TextButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColor ?? Colors.white),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(9.0))))),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -1489,7 +1540,7 @@ class DangerBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                        TextStyle(color: buttonTextColor ?? Colors.black),
+                            TextStyle(color: buttonTextColor ?? Colors.black),
                       ),
                     ],
                   ),
@@ -1500,49 +1551,50 @@ class DangerBgAlertBox {
         });
   }
 }
-// ******************************[DangerBgAlertBox]******************************
+
+/// ******************************[DangerBgAlertBox]******************************
 //
 
-// ******************************[WarningBgAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its white
-// [messageColor] used for main message text color by default its white
-// [buttonColor] used for button background color by default its white
-// [buttonTextColor] used for button text color by default its black
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[WarningBgAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its white
+/// [messageColor] used for main message text color by default its white
+/// [buttonColor] used for button background color by default its white
+/// [buttonTextColor] used for button text color by default its black
+/// [buttonText] used for button text value by default its "Close"
 //
 class WarningBgAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   WarningBgAlertBox(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return AlertDialog(
             backgroundColor: Colors.orange,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -1554,11 +1606,11 @@ class WarningBgAlertBox {
                 ),
                 Flexible(
                     child: Text(
-                      title ?? "Your alert title",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: titleTextColor ?? Colors.white),
-                    )),
+                  title ?? "Your alert title",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: titleTextColor ?? Colors.white),
+                )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1568,10 +1620,13 @@ class WarningBgAlertBox {
                     style: TextStyle(color: messageTextColor ?? Colors.white),
                   ),
                 ),
-                FlatButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(9.0))),
-                  color: buttonColor ?? Colors.white,
+                TextButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColor ?? Colors.white),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(9.0))))),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -1581,7 +1636,7 @@ class WarningBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                        TextStyle(color: buttonTextColor ?? Colors.black),
+                            TextStyle(color: buttonTextColor ?? Colors.black),
                       ),
                     ],
                   ),
@@ -1593,49 +1648,49 @@ class WarningBgAlertBox {
   }
 }
 
-// ******************************[WarningBgAlertBox]******************************
+/// ******************************[WarningBgAlertBox]******************************
 //
 
-// ******************************[InfoBgAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its white
-// [messageColor] used for main message text color by default its white
-// [buttonColor] used for button background color by default its white
-// [buttonTextColor] used for button text color by default its black
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[InfoBgAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its white
+/// [messageColor] used for main message text color by default its white
+/// [buttonColor] used for button background color by default its white
+/// [buttonTextColor] used for button text color by default its black
+/// [buttonText] used for button text value by default its "Close"
 //
 class InfoBgAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   InfoBgAlertBox(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return AlertDialog(
             backgroundColor: Colors.blue,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -1647,11 +1702,11 @@ class InfoBgAlertBox {
                 ),
                 Flexible(
                     child: Text(
-                      title ?? "Your alert title",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: titleTextColor ?? Colors.white),
-                    )),
+                  title ?? "Your alert title",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: titleTextColor ?? Colors.white),
+                )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1661,10 +1716,13 @@ class InfoBgAlertBox {
                     style: TextStyle(color: messageTextColor ?? Colors.white),
                   ),
                 ),
-                FlatButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(9.0))),
-                  color: buttonColor ?? Colors.white,
+                TextButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColor ?? Colors.white),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(9.0))))),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -1674,7 +1732,7 @@ class InfoBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                        TextStyle(color: buttonTextColor ?? Colors.black),
+                            TextStyle(color: buttonTextColor ?? Colors.black),
                       ),
                     ],
                   ),
@@ -1686,49 +1744,49 @@ class InfoBgAlertBox {
   }
 }
 
-// ******************************[InfoBgAlertBox]******************************
+/// ******************************[InfoBgAlertBox]******************************
 //
 
-// ******************************[DarkBgAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its Color(0xFF4E4E4E)
-// [messageColor] used for main message text color by default its Color(0xFF4E4E4E)
-// [buttonColor] used for button background color by default its Color(0xFF4E4E4E)
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[DarkBgAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its Color(0xFF4E4E4E)
+/// [messageColor] used for main message text color by default its Color(0xFF4E4E4E)
+/// [buttonColor] used for button background color by default its Color(0xFF4E4E4E)
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class DarkBgAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   DarkBgAlertBox(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return AlertDialog(
             backgroundColor: Color(0xFF20242A),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -1740,11 +1798,11 @@ class DarkBgAlertBox {
                 ),
                 Flexible(
                     child: Text(
-                      title ?? "Your alert title",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: titleTextColor ?? Color(0xFF4E4E4E)),
-                    )),
+                  title ?? "Your alert title",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: titleTextColor ?? Color(0xFF4E4E4E)),
+                )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1752,13 +1810,16 @@ class DarkBgAlertBox {
                   child: Text(
                     infoMessage ?? "Alert message here",
                     style:
-                    TextStyle(color: messageTextColor ?? Color(0xFF4E4E4E)),
+                        TextStyle(color: messageTextColor ?? Color(0xFF4E4E4E)),
                   ),
                 ),
-                FlatButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(9.0))),
-                  color: buttonColor ?? Color(0xFF4E4E4E),
+                TextButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColor ?? Color(0xFF4E4E4E)),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(9.0))))),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -1768,7 +1829,7 @@ class DarkBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                        TextStyle(color: buttonTextColor ?? Colors.white),
+                            TextStyle(color: buttonTextColor ?? Colors.white),
                       ),
                     ],
                   ),
@@ -1780,49 +1841,49 @@ class DarkBgAlertBox {
   }
 }
 
-// ******************************[DarkBgAlertBox]******************************
+/// ******************************[DarkBgAlertBox]******************************
 //
 
-// ******************************[SimpleBgAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its Color(0xFF4E4E4E)
-// [messageColor] used for main message text color by default its Color(0xFF4E4E4E)
-// [buttonColor] used for button background color by default its Color(0xFF4E4E4E)
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[SimpleBgAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its Color(0xFF4E4E4E)
+/// [messageColor] used for main message text color by default its Color(0xFF4E4E4E)
+/// [buttonColor] used for button background color by default its Color(0xFF4E4E4E)
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class SimpleBgAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final String? buttonText;
   SimpleBgAlertBox(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return AlertDialog(
             backgroundColor: Color(0xFFF4F4F4),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -1834,11 +1895,11 @@ class SimpleBgAlertBox {
                 ),
                 Flexible(
                     child: Text(
-                      title ?? "Your alert title",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: titleTextColor ?? Color(0xFF4E4E4E)),
-                    )),
+                  title ?? "Your alert title",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: titleTextColor ?? Color(0xFF4E4E4E)),
+                )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1846,13 +1907,16 @@ class SimpleBgAlertBox {
                   child: Text(
                     infoMessage ?? "Alert message here",
                     style:
-                    TextStyle(color: messageTextColor ?? Color(0xFF4E4E4E)),
+                        TextStyle(color: messageTextColor ?? Color(0xFF4E4E4E)),
                   ),
                 ),
-                FlatButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(9.0))),
-                  color: buttonColor ?? Color(0xFF4E4E4E),
+                TextButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColor ?? Color(0xFF4E4E4E)),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(9.0))))),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -1862,7 +1926,7 @@ class SimpleBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                        TextStyle(color: buttonTextColor ?? Colors.white),
+                            TextStyle(color: buttonTextColor ?? Colors.white),
                       ),
                     ],
                   ),
@@ -1874,51 +1938,51 @@ class SimpleBgAlertBox {
   }
 }
 
-// ******************************[SimpleBgAlertBox]******************************
+/// ******************************[SimpleBgAlertBox]******************************
 //
 
-// ******************************[CustomBgAlertBox]******************************
-// [title] used for alert_box title by default its "Your alert title comes here"
-// [icon] used for  alert_box title Icon by default its Info icon
-// [messageText] used from main message of alert box by default its "Alert Message Here"
-// [titleTextColor] used for  both title Text and Icon color by default its white
-// [messageColor] used for main message text color by default its white
-// [buttonColor] used for button background color by default its white
-// [buttonTextColor] used for button text color by default its white
-// [buttonText] used for button text value by default its "Close"
+/// ******************************[CustomBgAlertBox]******************************
+/// [title] used for alert_box title by default its "Your alert title comes here"
+/// [icon] used for  alert_box title Icon by default its Info icon
+/// [messageText] used from main message of alert box by default its "Alert Message Here"
+/// [titleTextColor] used for  both title Text and Icon color by default its white
+/// [messageColor] used for main message text color by default its white
+/// [buttonColor] used for button background color by default its white
+/// [buttonTextColor] used for button text color by default its white
+/// [buttonText] used for button text value by default its "Close"
 //
 class CustomBgAlertBox {
-  final BuildContext context;
-  final String title;
-  final IconData icon;
-  final String infoMessage;
-  final Color titleTextColor;
-  final Color messageTextColor;
-  final Color buttonColor;
-  final Color buttonTextColor;
-  final Color bgColor;
-  final String buttonText;
+  final BuildContext? context;
+  final String? title;
+  final IconData? icon;
+  final String? infoMessage;
+  final Color? titleTextColor;
+  final Color? messageTextColor;
+  final Color? buttonColor;
+  final Color? buttonTextColor;
+  final Color? bgColor;
+  final String? buttonText;
   CustomBgAlertBox(
       {this.context,
-        this.title,
-        this.infoMessage,
-        this.titleTextColor,
-        this.messageTextColor,
-        this.buttonColor,
-        this.buttonText,
-        this.buttonTextColor,
-        this.bgColor,
-        this.icon}) {
+      this.title,
+      this.infoMessage,
+      this.titleTextColor,
+      this.messageTextColor,
+      this.buttonColor,
+      this.buttonText,
+      this.buttonTextColor,
+      this.bgColor,
+      this.icon}) {
     showDialog(
         barrierDismissible: false,
-        context: context,
+        context: context!,
         builder: (BuildContext context) {
           return AlertDialog(
             backgroundColor: bgColor ?? Color(0xFFF4F4F4),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0))),
             contentPadding:
-            const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
+                const EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 8),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -1930,11 +1994,11 @@ class CustomBgAlertBox {
                 ),
                 Flexible(
                     child: Text(
-                      title ?? "Your alert title",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: titleTextColor ?? Colors.black),
-                    )),
+                  title ?? "Your alert title",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: titleTextColor ?? Colors.black),
+                )),
                 SizedBox(
                   height: 4.0,
                 ),
@@ -1944,10 +2008,13 @@ class CustomBgAlertBox {
                     style: TextStyle(color: messageTextColor ?? Colors.black),
                   ),
                 ),
-                FlatButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(9.0))),
-                  color: buttonColor ?? Colors.black,
+                TextButton(
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          buttonColor ?? Colors.black),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(9.0))))),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -1957,7 +2024,7 @@ class CustomBgAlertBox {
                       Text(
                         buttonText ?? "Close",
                         style:
-                        TextStyle(color: buttonTextColor ?? Colors.white),
+                            TextStyle(color: buttonTextColor ?? Colors.white),
                       ),
                     ],
                   ),
@@ -1969,5 +2036,5 @@ class CustomBgAlertBox {
   }
 }
 
-// ******************************[CustomBgAlertBox]******************************
+/// ******************************[CustomBgAlertBox]******************************
 //
