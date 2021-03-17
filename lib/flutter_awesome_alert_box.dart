@@ -129,7 +129,7 @@ class InfoAlertBox {
             title: Row(
               children: <Widget>[
                 Icon(
-                  Icons.info,
+                  icon ?? Icons.info,
                   color: titleTextColor ?? Color(0xFF3DC0F1),
                 ),
                 SizedBox(
@@ -217,7 +217,7 @@ class SuccessAlertBox {
             title: Row(
               children: <Widget>[
                 Icon(
-                  Icons.check_circle,
+                  icon ?? Icons.check_circle,
                   color: titleTextColor ?? Color(0xFF4CB051),
                 ),
                 SizedBox(
@@ -305,7 +305,7 @@ class DangerAlertBox {
             title: Row(
               children: <Widget>[
                 Icon(
-                  Icons.error,
+                  icon ?? Icons.error,
                   color: titleTextColor ?? Color(0xFFFF5455),
                 ),
                 SizedBox(
@@ -393,7 +393,7 @@ class WarningAlertBox {
             title: Row(
               children: <Widget>[
                 Icon(
-                  Icons.warning,
+                  icon ?? Icons.warning,
                   color: titleTextColor ?? Color(0xFFFF9800),
                 ),
                 SizedBox(
@@ -483,7 +483,7 @@ class DarkAlertBox {
               children: <Widget>[
                 Center(
                   child: Icon(
-                    Icons.mood,
+                    icon ?? Icons.mood,
                     color: titleTextColor ?? Color(0xFF4E4E4E),
                   ),
                 ),
@@ -1031,6 +1031,8 @@ class ConfirmAlertBox {
   final String? buttonTextForNo;
   final Function? onPressedYes;
   final Function? onPressedNo;
+  late Future result;
+
   ConfirmAlertBox(
       {this.context,
       this.title,
@@ -1046,7 +1048,7 @@ class ConfirmAlertBox {
       this.onPressedYes,
       this.onPressedNo,
       this.icon}) {
-    showDialog(
+    result = showDialog(
         barrierDismissible: false,
         context: context!,
         builder: (BuildContext context) {
@@ -1084,7 +1086,9 @@ class ConfirmAlertBox {
                       backgroundColor: MaterialStateProperty.all(
                           buttonColorForYes ?? Colors.green),
                     ),
-                    onPressed: onPressedYes as void Function()? ?? () {},
+                    onPressed: onPressedYes as void Function()? ?? () {
+                      Navigator.of(context).pop("Yes");
+                    },
                     child: Text(
                       buttonTextForYes ?? "Yes",
                       style: TextStyle(
@@ -1101,7 +1105,7 @@ class ConfirmAlertBox {
                     ),
                     onPressed: onPressedNo as void Function()? ??
                         () {
-                          Navigator.of(context).pop();
+                          Navigator.of(context).pop("No");
                         },
                     child: Text(
                       buttonTextForNo ?? "No",
@@ -1151,6 +1155,8 @@ class ConfirmAlertBoxDark {
   final String? buttonTextForNo;
   final Function? onPressedYes;
   final Function? onPressedNo;
+  late Future result;
+
   ConfirmAlertBoxDark(
       {this.context,
       this.title,
@@ -1166,7 +1172,7 @@ class ConfirmAlertBoxDark {
       this.onPressedYes,
       this.onPressedNo,
       this.icon}) {
-    showDialog(
+    result = showDialog(
         barrierDismissible: false,
         context: context!,
         builder: (BuildContext context) {
@@ -1205,7 +1211,9 @@ class ConfirmAlertBoxDark {
                       backgroundColor: MaterialStateProperty.all(
                           buttonColorForYes ?? Color(0xFF4E4E4E)),
                     ),
-                    onPressed: onPressedYes as void Function()? ?? () {},
+                    onPressed: onPressedYes as void Function()? ?? () {
+                      Navigator.of(context).pop("Yes");
+                    },
                     child: Text(
                       buttonTextForYes ?? "Yes",
                       style: TextStyle(
@@ -1222,7 +1230,7 @@ class ConfirmAlertBoxDark {
                     ),
                     onPressed: onPressedNo as void Function()? ??
                         () {
-                          Navigator.of(context).pop();
+                          Navigator.of(context).pop("No");
                         },
                     child: Text(
                       buttonTextForNo ?? "No",
@@ -1272,6 +1280,8 @@ class DeleteAlertBox {
   final String? buttonTextForNo;
   final Function? onPressedYes;
   final Function? onPressedNo;
+  late Future result;
+
   DeleteAlertBox(
       {this.context,
       this.title,
@@ -1287,7 +1297,7 @@ class DeleteAlertBox {
       this.onPressedYes,
       this.onPressedNo,
       this.icon}) {
-    showDialog(
+    result = showDialog(
         barrierDismissible: false,
         context: context!,
         builder: (BuildContext context) {
@@ -1329,7 +1339,7 @@ class DeleteAlertBox {
                         ),
                         onPressed: onPressedNo as void Function()? ??
                             () {
-                              Navigator.of(context).pop();
+                              Navigator.of(context).pop("Cancel");
                             },
                         child: Text(
                           buttonTextForNo ?? "Cancel",
@@ -1345,7 +1355,9 @@ class DeleteAlertBox {
                           backgroundColor: MaterialStateProperty.all(
                               buttonColorForYes ?? Colors.green[600]),
                         ),
-                        onPressed: onPressedYes as void Function()? ?? () {},
+                        onPressed: onPressedYes as void Function()? ?? () {
+                          Navigator.of(context).pop("Delete");
+                        },
                         child: Text(
                           buttonTextForYes ?? "Delete",
                           style: TextStyle(
