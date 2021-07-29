@@ -5,3 +5,7 @@
 ## [2.0.0-prerelease-nullsafety] - 10-03-2021
 
 - prerelease null safety
+
+## [2.1.0] - 29-07-2021
+
+- sound null safety
