@@ -1,8 +1,8 @@
 name: flutter_awesome_alert_box
 description: A new flutter package project which contains lots of beautiful alert dialog that will help you lot to create beautiful awesome alert box very quickly and easily..
-version: 2.1.0
+version: 2.1.1
 # author: Karan Soni <skaran921@gmail.com>
-homepage: https://github.com/skaran921/flutter_awesom_aler_box
+homepage: https://github.com/skaran921/flutter_awesom_alert_box
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
